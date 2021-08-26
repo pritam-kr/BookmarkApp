@@ -37,6 +37,8 @@ form.addEventListener('submit', (e) =>{
 
 })
 
+
+
 function fetchTheLocalStorage(){
     var fecthBookMarks = JSON.parse(localStorage.getItem('bookmarks'))
     const showBookMarks = document.querySelector('.links')
@@ -46,11 +48,27 @@ function fetchTheLocalStorage(){
         
             <div class="bookmark-box">
                 <h1>${fecthBookMarks[i].name}</h1>
-                <a href="${fecthBookMarks[i].siteUrl}"><button>Visit</button></a> <button>Remove</button>
+                <a href="${fecthBookMarks[i].siteUrl}"><button>Visit</button></a> <button class="btn-delete">Remove</button>
             </div>
 
         `
         showBookMarks.innerHTML = bookmark;
     }
+
+    const btnDelete = document.querySelectorAll('.btn-delete')
+    btnDelete.forEach((each) =>{
+        each.addEventListener("click", (e) =>{
+            var bookmark = JSON.parse(localStorage.getItem('bookmarks'))
+            for(i=0; i<bookmark.length; i++){
+                if(bookmark[i].siteUrl == fecthBookMarks[i].siteUrl){
+                    bookmark.splice(i, 1);
+                }
+            }
+            
+            localStorage.setItem('bookmarks', JSON.stringify(bookmark))
+
+            fetchTheLocalStorage()
+        })
+    })
 }
 
