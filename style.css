@@ -47,3 +47,17 @@ main{
     padding: 7px 20px;
     cursor: pointer;
 }
+
+footer{
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+footer ul li{
+    display: inline-block;
+    margin: 0 10PX;
+}
+footer ul li a{
+    font-size: 1.3rem;
+    color: rgb(54, 54, 54);
+}

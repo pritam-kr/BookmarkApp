@@ -8,6 +8,10 @@ form.addEventListener('submit', (e) =>{
     const title = siteTitle.value;
     const url = siteLink.value;
 
+    if(!title || !url){
+        console.log("Enter the form")
+        return false
+    }
     var bookmark = {
         name: title,
         siteUrl : url
@@ -49,3 +53,4 @@ function fetchTheLocalStorage(){
         showBookMarks.innerHTML = bookmark;
     }
 }
+
