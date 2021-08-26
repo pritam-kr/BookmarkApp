@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.bookmark-container{
+    width: 500px;
+    margin: 0 20px;
+}
+.bookmark-container form input{
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+}
+.bookmark-container form button{
+    padding: 7px 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.links{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.links .bookmark-box {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+    padding: 10px 0;
+    margin: 10px;
+}
+.links .bookmark-box h1{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.bookmark-box button{
+    padding: 7px 20px;
+    cursor: pointer;
+}
